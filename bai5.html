@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Tính trung bình cộng của một đội
+function calcAverage(score1, score2, score3) {
+  return (score1 + score2 + score3) / 3;
+}
+
+// Tính điểm trung bình của đội Dolphins và đội Koalas
+var avgDolphins1 = calcAverage(44, 23, 71);
+var avgKoalas1 = calcAverage(65, 54, 49);
+
+var avgDolphins2 = calcAverage(85, 54, 41);
+var avgKoalas2 = calcAverage(23, 34, 27);
+
+// Hàm kiểm tra người chiến thắng
+function checkWinner(avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    return `Cá heo thắng (${avgDolphins} vs. ${avgKoalas})`;
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    return `Gấu túi thắng (${avgKoalas} vs. ${avgDolphins})`;
+  } else {
+    return "Không có đội nào thắng!";
+  }
+}
+
+// Kiểm tra người chiến thắng cho Dữ liệu 1 và Dữ liệu 2
+console.log(checkWinner(avgDolphins1, avgKoalas1));
+console.log(checkWinner(avgDolphins2, avgKoalas2));
+
+</script>
+</body>
+</html>
