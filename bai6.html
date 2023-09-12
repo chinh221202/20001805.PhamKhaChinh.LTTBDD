@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Hàm tính tiền boa dựa trên giá trị hóa đơn
+function calcTip(bill) {
+  return (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+}
+
+// Dữ liệu thử nghiệm - Mảng hóa đơn
+var bills = [125, 555, 44];
+
+// Tạo mảng 'tiền boa' chứa giá trị tiền boa cho mỗi hóa đơn
+var tips = [];
+for (var i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+}
+
+// Tạo mảng 'total' chứa tổng giá trị (hóa đơn + tiền boa) cho mỗi hóa đơn
+var totals = [];
+for (var i = 0; i < bills.length; i++) {
+  totals.push(bills[i] + tips[i]);
+}
+
+// In kết quả ra bảng điều khiển
+console.log("Danh sách hóa đơn:", bills);
+console.log("Danh sách tiền boa:", tips);
+console.log("Danh sách tổng giá trị:", totals);
+
+</script>  
+</body>
+</html>
