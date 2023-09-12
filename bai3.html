@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    // Điểm trung bình của đội Dolphins (điểm số của 3 lượt thi)
+var dolphinsScore1 = 96;
+var dolphinsScore2 = 108;
+var dolphinsScore3 = 89;
+
+// Điểm trung bình của đội Koalas (điểm số của 3 lượt thi)
+var koalasScore1 = 88;
+var koalasScore2 = 91;
+var koalasScore3 = 110;
+
+// Tính điểm trung bình của từng đội
+var dolphinsAverage = (dolphinsScore1 + dolphinsScore2 + dolphinsScore3) / 3;
+var koalasAverage = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
+
+console.log(`Điểm trung bình của đội Dolphins: ${dolphinsAverage.toFixed(2)}`);
+console.log(`Điểm trung bình của đội Koalas: ${koalasAverage.toFixed(2)}`);
+
+// So sánh điểm trung bình để xác định đội chiến thắng và in kết quả ra màn hình
+if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+  console.log("Đội Dolphins chiến thắng với điểm trung bình cao hơn!");
+} else if (koalasAverage > dolphinsAverage && koalasAverage >= 100) {
+  console.log("Đội Koalas chiến thắng với điểm trung bình cao hơn!");
+} else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+  console.log("Hòa! Cả hai đội có cùng điểm trung bình cao hơn 100!");
+} else {
+  console.log("Không có đội nào thắng cuộc!");
+}
+
+</script>
+</body>
+</html>
