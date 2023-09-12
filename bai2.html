@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+// Dữ liệu cho Mark và John
+var markWeight1 = 78; // Khối lượng Mark trong kg
+var markHeight1 = 1.69; // Chiều cao Mark trong mét
+
+var johnWeight1 = 92; // Khối lượng John trong kg
+var johnHeight1 = 1.95; // Chiều cao John trong mét
+
+var markWeight2 = 95; // Khối lượng Mark trong kg (Dữ liệu 2)
+var markHeight2 = 1.88; // Chiều cao Mark trong mét (Dữ liệu 2)
+
+var johnWeight2 = 85; // Khối lượng John trong kg (Dữ liệu 2)
+var johnHeight2 = 1.76; // Chiều cao John trong mét (Dữ liệu 2)
+
+// Tính chỉ số BMI cho Mark và John trong Dữ liệu 1
+var bmiMark1 = markWeight1 / (markHeight1 * markHeight1);
+var bmiJohn1 = johnWeight1 / (johnHeight1 * johnHeight1);
+
+// Tính chỉ số BMI cho Mark và John trong Dữ liệu 2
+var bmiMark2 = markWeight2 / (markHeight2 * markHeight2);
+var bmiJohn2 = johnWeight2 / (johnHeight2 * johnHeight2);
+
+// Xác định ai có chỉ số BMI cao hơn trong Dữ liệu 1
+var markHigherBMI1 = bmiMark1 > bmiJohn1;
+
+// Xác định ai có chỉ số BMI cao hơn trong Dữ liệu 2
+var markHigherBMI2 = bmiMark2 > bmiJohn2;
+
+// In kết quả cho Dữ liệu 1
+console.log("Dữ liệu 1:");
+if (markHigherBMI1) {
+  console.log(`Chỉ số BMI của Mark (${bmiMark1.toFixed(1)}) cao hơn John (${bmiJohn1.toFixed(1)})!`);
+} else {
+  console.log(`Chỉ số BMI của John (${bmiJohn1.toFixed(1)}) cao hơn Mark (${bmiMark1.toFixed(1)})!`);
+}
+
+// In kết quả cho Dữ liệu 2
+console.log("\nDữ liệu 2:");
+if (markHigherBMI2) {
+  console.log(`Chỉ số BMI của Mark (${bmiMark2.toFixed(1)}) cao hơn John (${bmiJohn2.toFixed(1)})!`);
+} else {
+  console.log(`Chỉ số BMI của John (${bmiJohn2.toFixed(1)}) cao hơn Mark (${bmiMark2.toFixed(1)})!`);
+}
+
+</script>
+</body>
+</html>
